@@ -1,8 +1,28 @@
 # GenoPheno_Embedding_Validator
 
-Idea: Haplograph --> Evo2 genomic model
+Genome Cluster Engine Project
 
-Builds a haploblock co-occurrence graph per chromosome from the [1000 Genomes haplograph](https://data.haploblocks.org/haplograph/1000G/), turns its nodes into embeddings with a GNN or XGBoost, and fine-tunes Evo 2 (7B) on those embeddings.
+Established and optimized the haploblocks method for discretizing genomic data (https://osf.io/xhkc3)
+Generated binary strings from haploblock clusters and did some basic linear modeling. Leveraged XGBoost and deep learning. Results were promising but not conclusive.
+Processed the 1000 genomes data set with the haploblocks method (paper submitted)
+Established and optimized the haplographs method (manuscript in preparation)
+
+Here’s what we are currently working on.
+
+Establishing what use cases respond better to a simpler clustering method (linclust)
+Establishing what use cases respond best to:
+Associated binary strings of haploblocks going straight into a DNA foundation model
+Using XGBoost to come up with cogent groups of haploblocks during analysis
+Building a haplograph and using node2vec to process the phenotype-genotype relationships
+Building a haplograph and using a GNN (PyTorch) to isolate subnetworks and create contextualized vectors
+Using XGBoost to come up with cogent groups of haploblocks during analysis of haplograph data
+Testing all of the above conditions in both cancer and germline disease
+Testing in what conditions early fusion or late fusion of proteomics data with genomic data and phenotype but is more effective
+
+
+## Testing pertubations of the Haplograph --> Evo2 genomic model to see what works best in particular settings.  
+
+As a POC, builds a haploblock co-occurrence graph per chromosome from the [1000 Genomes haplograph](https://data.haploblocks.org/haplograph/1000G/), turns its nodes into embeddings with a GNN or XGBoost, and fine-tunes Evo 2 (7B) on those embeddings
 
 For more see: [haploblocks.org](haploblocks.org)
 
