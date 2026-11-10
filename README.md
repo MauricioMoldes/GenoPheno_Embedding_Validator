@@ -71,3 +71,4 @@ site, compute tumor minus normal per protein and patient, and write node and edg
 proteins, protein-to-block edges) plus a protein × patient matrix. Each block also carries its haplograph id
 (`chr21_14215892-14284114`), so proteins can be joined to the cluster nodes from `1_build_graph.py` by prefix.
 See [`proteomics_prep/README.md`](proteomics_prep/README.md).
+[`synthtan_prolm/`](synthtan_prolm/) converts the synthetic SynthTAN cohorts to ProLM's input format.
