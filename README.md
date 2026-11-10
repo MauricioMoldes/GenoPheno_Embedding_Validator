@@ -54,3 +54,12 @@ python 4_finetune_evo2.py   --method node2vec      # --objective next (default) 
 ```
 
 Add `--chroms chr21,chr22` to any step for a quick test run, and `--help` to see all options.
+
+## Proteomics preparation (paired tumor/normal)
+
+[`proteomics_prep/`](proteomics_prep/) holds R scripts that prepare paired tumor/normal proteomics for the early
+versus late fusion tests. They place each protein in the haploblock that holds its gene's transcription start
+site, compute tumor minus normal per protein and patient, and write node and edge CSVs (patients, blocks,
+proteins, protein-to-block edges) plus a protein × patient matrix. Each block also carries its haplograph id
+(`chr21_14215892-14284114`), so proteins can be joined to the cluster nodes from `1_build_graph.py` by prefix.
+See [`proteomics_prep/README.md`](proteomics_prep/README.md).
