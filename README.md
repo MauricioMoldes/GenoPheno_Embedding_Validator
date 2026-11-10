@@ -1,8 +1,5 @@
 # Haplograph → Evo 2
 
-<<<<<<< HEAD
-Builds a genome-wide (or per-chromosome-selection) haploblock co-occurrence graph from the [1000 Genomes haplograph](https://data.haploblocks.org/haplograph/1000G/), turns its nodes into embeddings with node2vec, a GNN or XGBoost, and fine-tunes Evo 2 (7B) on those embeddings.
-=======
 Genome Cluster Engine Project
 
 Established and optimized the haploblocks method for discretizing genomic data (https://osf.io/xhkc3)
@@ -28,7 +25,6 @@ Testing in what conditions early fusion or late fusion of proteomics data with g
 As a POC, builds a haploblock co-occurrence graph per chromosome from the [1000 Genomes haplograph](https://data.haploblocks.org/haplograph/1000G/), turns its nodes into embeddings with a GNN or XGBoost, and fine-tunes Evo 2 (7B) on those embeddings
 
 For more see: [haploblocks.org](haploblocks.org)
->>>>>>> a9981ef5e84966f20c41f9de122e5e1646b4b54d
 
 ## Dependencies
 
@@ -57,8 +53,4 @@ python 3_node_embeddings.py --method node2vec      # or gnn / xgboost
 python 4_finetune_evo2.py   --method node2vec      # --objective next (default) or ancestry
 ```
 
-<<<<<<< HEAD
-For a quick test, build a small graph with `python 1_build_graph.py --chroms chr21,chr22` and pass `--graph-dir haplograph/chr21_chr22` to steps 2–4. Each script's header describes its input and output file formats, and `--help` lists all options.
-=======
 Add `--chroms chr21,chr22` to any step for a quick test run, and `--help` to see all options.
->>>>>>> a9981ef5e84966f20c41f9de122e5e1646b4b54d
